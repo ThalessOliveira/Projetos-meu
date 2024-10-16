@@ -1,0 +1,10 @@
+CREATE DATABASE gestaoprojetos;
+
+USE gestaoprojetos;
+
+CREATE TABLE projetos (
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+	nomeproj VARCHAR(255),
+	descricao VARCHAR(255),
+	estado VARCHAR(255)
+);
