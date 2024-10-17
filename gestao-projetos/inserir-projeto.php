@@ -6,6 +6,8 @@ $nomeproj = trim($_POST['nomeprojeto']);
 $descricao  = trim($_POST['descricao']);
 $estado = trim($_POST['estado']);
 
+
+
 if(empty($nomeproj) || empty($descricao) || empty($estado)){
     echo "<script>alert('Preencha todos os campos'); window.history.back();</script>";
 } else {
