@@ -30,7 +30,7 @@ include_once "./bd-projetos/bd.php";
                 foreach($projetos as $projeto){
                 ?>
                     <tr>
-                        <td><a href="detalhes.php?del_id=<?=$projeto['id']?>" class="btn btn-outline-secondary btn fw-bold">Ver Detalhes</a></td>
+                        <td><a href="detalhes.php?details_id=<?=$projeto['id']?>" class="btn btn-outline-secondary btn fw-bold">Ver Detalhes</a></td>
                         <td class="fs-5 fw-bold"><?=$projeto['nomeproj']?></td>
                 <?php
                     if(($projeto['estado']) == 1){

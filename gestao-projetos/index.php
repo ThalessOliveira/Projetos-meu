@@ -12,8 +12,27 @@ if(isset($_GET['edit_id'])){
     $projetos = $projetos[0];
     print_r($projetos);
 
+    print_r($projetos['estado']);
+              
 } else {
     $submeter = "inserir-projeto.php";
+}
+
+if(isset($projetos['estado'])){
+    echo '<p class="text-light">ESTOU AQUI</p>';
+    switch($projetos['estado']){
+        case '':
+            $estado = '0';
+            break;
+        case '1':
+            $estado = '1';
+            break;
+        case '2':
+            $estado = '2';
+            break;
+    }
+} else {
+    $estado = '0';
 }
 
 ?>
@@ -29,9 +48,9 @@ if(isset($_GET['edit_id'])){
             <input class="form-control form-control-lg m-5 mx-auto" name="descricao" type="text" value="<?=isset($projetos['nomeproj'])?$projetos['descricao']:''?>" placeholder="Fale Sobre">
 
             <select class="form-select form-select-lg" name="estado" id="estado">
-                <option selected>Concluído ou não?</option>
-                <option value="1">A fazer</option>
-                <option value="2">Concluído</option>
+                <option <?php if($estado == '0') echo 'selected'?>>Concluído ou não?</option>
+                <option <?php if($estado == '1') echo 'selected'?>>A fazer</option>
+                <option <?php if($estado == '2') echo 'selected'?>>Concluído</option>
             </select>
 
             <button class="btn btn-outline-secondary mt-5 btn-lg fw-bold">Submit</button>
