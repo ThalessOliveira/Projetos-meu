@@ -14,7 +14,7 @@ if(empty($nomeproj) || empty($descricao) || empty($estado)){
 
     try{
         if($estado == "Concluído ou não?"){
-            $estado = 1;
+            $estado = "A fazer";
         }
         $sql = $pdo->prepare("INSERT INTO projetos VALUES (null, ?, ?, ?);");
         $sql -> execute(array(

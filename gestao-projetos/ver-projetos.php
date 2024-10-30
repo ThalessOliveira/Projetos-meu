@@ -33,13 +33,13 @@ include_once "./bd-projetos/bd.php";
                         <td><a href="detalhes.php?details_id=<?=$projeto['id']?>" class="btn btn-outline-secondary btn fw-bold">Ver Detalhes</a></td>
                         <td class="fs-5 fw-bold"><?=$projeto['nomeproj']?></td>
                 <?php
-                    if(($projeto['estado']) == 1){
-                         $estado = 'A fazer';
+                    if(($projeto['estado']) == "A fazer"){
+                         $estado = "A fazer";
                 ?>
                          <td class="fw-bold text-danger"><?=$estado?></td>
                 <?php
                          } else {
-                          $estado = 'Concluído';
+                          $estado = "Concluído";
                 ?>
                           <td class="fw-bold text-success"><?=$estado?></td>
                 <?php

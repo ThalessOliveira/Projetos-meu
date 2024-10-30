@@ -16,12 +16,12 @@ print_r($projetos);
 
 <div class="container">
         <div class="p-5"></div>
-        <div class="border rounded p-5 bg-dark text-center col-6 mx-auto mt-5">
-            <div class="border rounded p-5 bg-light text-center mx-auto mt-5">
-                <p>Id: <?=$projetos['id']?></p>
-                <p>Nome: <?=$projetos['nomeproj']?></p>
-                <p>Descrição: <?=$projetos['descricao']?></p>
-                <p>Estado: <?=$projetos['estado']?></p>
+        <div class="border rounded p-5 bg-dark  col-6 mx-auto mt-5">
+            <div class="border rounded p-5 bg-light  mx-auto mt-5">
+                <strong>Id: </strong> <?=$projetos['id']?><br>
+                <strong>Nome: </strong> <?=$projetos['nomeproj']?><br>
+                <strong>Descrição: </strong> <?=$projetos['descricao']?><br>
+                <strong>Estado: </strong> <?=$projetos['estado']?>
             </div>
             <a href="ver-projetos.php" class="btn btn-outline-secondary mt-5 btn-lg fw-bold">Ver Projetos</a>
         </div>
